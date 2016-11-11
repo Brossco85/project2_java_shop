@@ -38,5 +38,13 @@ public class Shop {
         this.funds -= funds;
     }
 
+    public void makeSale(double saleValue){
+        addFunds(saleValue);
+    }
+
+    public void refundSale(double refundValue){
+        subtractFunds(refundValue);
+    }
+
 
 }

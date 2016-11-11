@@ -46,4 +46,16 @@ Shop shop;
         shop.subtractFunds(100.00);
         assertEquals(400.00, shop.getFunds());
     }
+
+    @Test
+    public void testMakeSale(){
+        shop.makeSale(50.00);
+        assertEquals(550.00, shop.getFunds());
+    }
+
+    @Test
+    public void testRefundSale(){
+        shop.refundSale(30.00);
+        assertEquals(470.00, shop.getFunds());
+    }
 }
