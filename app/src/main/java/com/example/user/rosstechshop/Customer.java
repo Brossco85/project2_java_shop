@@ -21,20 +21,26 @@ public class Customer {
         return this.name;
     }
 
-    public int getFunds(){
-        Integer sum = 0;
-        for (Integer fundsAvailable : paymentOptions.values()) {
-            sum += fundsAvailable;
-            funds += sum;
-        }
-        return this.funds;
-    }
-
     public void addPaymentCard(CardType card, int fundsAvailable){
         paymentOptions.put(card, fundsAvailable);
     }
 
-//    public void addFunds(double funds){
-//        this.funds += funds;
-//    }
+    public void makePaymentFromCard(CardType card, Integer amount ){
+        paymentOptions.put(card, paymentOptions.get(card) - amount);
+    }
+
+    public void refundPaymentToCard(CardType card, Integer amount ){
+        paymentOptions.put(card, paymentOptions.get(card) + amount);
+    }
+
+    public int getTotalFundsAvailable(){
+        Integer sum = 0;
+        for (Integer fundsAvailable : paymentOptions.values()) {
+            sum += fundsAvailable;
+            funds = sum;
+        }
+        return this.funds;
+    }
+
+
 }
