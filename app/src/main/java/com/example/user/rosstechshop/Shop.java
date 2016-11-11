@@ -25,8 +25,18 @@ public class Shop {
     public double getFunds(){
         return this.funds;
     }
+
     public void setFunds(double funds){
         this.funds = funds;
     }
+
+    public void addFunds(double funds){
+        this.funds += funds;
+    }
+
+    public void subtractFunds( double funds){
+        this.funds -= funds;
+    }
+
 
 }

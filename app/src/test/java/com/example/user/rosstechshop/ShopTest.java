@@ -28,4 +28,22 @@ Shop shop;
     public void testShopFunds(){
         assertEquals(500.00, shop.getFunds());
     }
+
+    @Test
+    public void testSetFunds(){
+        shop.setFunds(600.00);
+        assertEquals(600.00, shop.getFunds());
+    }
+
+    @Test
+    public void testAddFunds(){
+        shop.addFunds(100.00);
+        assertEquals(600.00, shop.getFunds());
+    }
+
+    @Test
+    public void testSubtractFunds(){
+        shop.subtractFunds(100.00);
+        assertEquals(400.00, shop.getFunds());
+    }
 }
