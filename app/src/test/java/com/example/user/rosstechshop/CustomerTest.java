@@ -23,4 +23,10 @@ public class CustomerTest {
         assertEquals("Joanne", customer.getName());
     }
 
+    @Test
+    public void testAddPaymentCard(){
+        customer.addPaymentCard(CardType.BARCLAYCARD, 600);
+        assertEquals(600, customer.getFunds() );
+    }
+
 }
