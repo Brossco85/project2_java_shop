@@ -12,14 +12,23 @@ public class Shop {
     private String name;
     private double sales;
     private double refunds;
-//    public ArrayList<Item>
+    public ArrayList<Item> stock = new ArrayList<Item>();
 
     public Shop (String name) {
         this.name = name;
+        stockSetup();
     }
 
 
-    public void stockSetup(){
+    private void stockSetup(){
+        Item item1= new Item("Apple", "Macbook", 100);
+        stock.add(item1);
+        Item item2= new Item("Apple", "Iphone", 200);
+        stock.add(item2);
+        Item item3= new Item("Samsung", "Galaxy", 150);
+        stock.add(item3);
+        Item item4= new Item("Apple", "Macbook", 100);
+        stock.add(item4);
 
     }
 
@@ -57,6 +66,10 @@ public class Shop {
 
     public double getTotalIncome(){
         return sales + refunds;
+    }
+
+    public ArrayList<Item> getStock(){
+        return this.stock;
     }
 
 

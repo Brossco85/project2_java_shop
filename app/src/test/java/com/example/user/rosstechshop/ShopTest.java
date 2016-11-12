@@ -54,4 +54,9 @@ Shop shop;
         shop.refundSale(30.00);
         assertEquals(20.00, shop.getTotalIncome());
     }
+
+    @Test
+    public void testStockSetup(){
+        assertEquals(4, shop.getStock().size());
+    }
 }

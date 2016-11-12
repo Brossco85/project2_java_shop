@@ -15,7 +15,7 @@ public class ItemTest {
 
     @Before
     public void before(){
-        item = new Item("Macbook", "Apple", 100);
+        item = new Item("Apple","Macbook", 100);
     }
 
     @Test

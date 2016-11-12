@@ -11,9 +11,9 @@ public class Item {
     double price;
 
 
-    public Item(String name, String brand, double price){
-        this.name = name;
+    public Item(String brand, String name , double price){
         this.brand = brand;
+        this.name = name;
         this.price = price;
     }
 
