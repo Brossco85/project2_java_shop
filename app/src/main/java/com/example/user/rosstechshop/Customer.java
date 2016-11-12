@@ -42,5 +42,9 @@ public class Customer {
         return this.funds;
     }
 
+    public int getCardBalance(CardType card){
+        return paymentOptions.get(card);
+    }
+
 
 }
