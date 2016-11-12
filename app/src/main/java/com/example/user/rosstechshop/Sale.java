@@ -20,7 +20,7 @@ public class Sale {
 
     }
 
-    public void recordSale(){
+    private void recordSale(){
         customer.makePurchase(card, amount);
         shop.makeSale(amount);
     }
