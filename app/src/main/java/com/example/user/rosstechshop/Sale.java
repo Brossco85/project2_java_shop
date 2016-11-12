@@ -10,24 +10,24 @@ public class Sale {
     private Customer customer;
     private Shop shop;
     private CardType card;
-    private Integer amount;
+    private Item item;
 //    private int invoiceNumber = 0;
 
 
-    public Sale(Customer customer, Shop shop, CardType card, int amount){
+    public Sale(Customer customer, Shop shop, CardType card, Item item){
 //        invoiceNumber = nextInvoiceNumber;
 //        nextInvoiceNumber++;
         this.customer = customer;
         this.shop = shop;
         this.card = card;
-        this.amount = amount;
+        this.item = item;
         recordSale();
 
     }
 
     private void recordSale(){
-        customer.makePurchase(card, amount);
-        shop.makeSale(amount);
+        customer.makePurchase(card, item.getPrice());
+        shop.makeSale(item.getPrice());
     }
 
 //    public int getInvoiceNumber(){
