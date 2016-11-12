@@ -16,7 +16,11 @@ public class Shop {
 
     public Shop (String name) {
         this.name = name;
-        this.sales = sales;
+    }
+
+
+    public void stockSetup(){
+
     }
 
     public String getName(){
