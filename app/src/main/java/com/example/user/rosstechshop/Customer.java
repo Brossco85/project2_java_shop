@@ -25,6 +25,8 @@ public class Customer {
         paymentOptions.put(card, fundsAvailable);
     }
 
+//    check if card exists if not add card to paymentOptions ArrayList
+
     public void makePaymentFromCard(CardType card, Integer amount ){
         paymentOptions.put(card, paymentOptions.get(card) - amount);
     }
@@ -46,6 +48,9 @@ public class Customer {
         return paymentOptions.get(card);
     }
 
+    public void makePurchase(CardType card, Integer purchase){
+        makePaymentFromCard(card, purchase);
+    }
 
 
 }

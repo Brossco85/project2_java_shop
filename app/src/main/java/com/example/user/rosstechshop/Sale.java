@@ -9,13 +9,20 @@ public class Sale {
     private Customer customer;
     private Shop shop;
     private CardType card;
-    private int amount;
+    private Integer amount;
 
     public Sale(Customer customer, Shop shop, CardType card, int amount){
         this.customer = customer;
         this.shop = shop;
         this.card = card;
         this.amount = amount;
+        recordSale();
+
+    }
+
+    public void recordSale(){
+        customer.makePurchase(card, amount);
+        shop.makeSale(amount);
     }
 
 

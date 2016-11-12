@@ -48,5 +48,11 @@ public class CustomerTest {
         assertEquals(500, customer.getCardBalance(CardType.MASTERCARD));
     }
 
+    @Test
+    public void testMakePurchase(){
+        customer.makePurchase(CardType.BARCLAYCARD, 200);
+        assertEquals(400, customer.getCardBalance(CardType.BARCLAYCARD));
+    }
+
 
 }
