@@ -16,7 +16,7 @@ Shop shop;
     @Before
 
     public void before(){
-        shop = new Shop("Glasgow", 500.00);
+        shop = new Shop("Glasgow");
     }
 
     @Test
@@ -25,37 +25,33 @@ Shop shop;
     }
 
     @Test
-    public void testShopFunds(){
-        assertEquals(500.00, shop.getFunds());
+    public void testAddSales(){
+        shop.addSales(100.00);
+        assertEquals(100.00, shop.getSales());
     }
 
     @Test
-    public void testSetFunds(){
-        shop.setFunds(600.00);
-        assertEquals(600.00, shop.getFunds());
-    }
-
-    @Test
-    public void testAddFunds(){
-        shop.addFunds(100.00);
-        assertEquals(600.00, shop.getFunds());
-    }
-
-    @Test
-    public void testSubtractFunds(){
-        shop.subtractFunds(100.00);
-        assertEquals(400.00, shop.getFunds());
+    public void testAddRefunds(){
+        shop.addRefunds(100.00);
+        assertEquals(-100.00, shop.getRefunds());
     }
 
     @Test
     public void testMakeSale(){
         shop.makeSale(50.00);
-        assertEquals(550.00, shop.getFunds());
+        assertEquals(50.00, shop.getSales());
     }
 
     @Test
     public void testRefundSale(){
         shop.refundSale(30.00);
-        assertEquals(470.00, shop.getFunds());
+        assertEquals(-30.00, shop.getRefunds());
+    }
+
+    @Test
+    public void testTotalIncome(){
+        shop.makeSale(50.00);
+        shop.refundSale(30.00);
+        assertEquals(20.00, shop.getTotalIncome());
     }
 }

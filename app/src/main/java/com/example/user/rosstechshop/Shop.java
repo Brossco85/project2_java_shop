@@ -10,40 +10,49 @@ import java.util.ArrayList;
 public class Shop {
 
     private String name;
-    private double funds;
+    private double sales;
+    private double refunds;
 //    public ArrayList<Item>
 
-    public Shop (String name, double funds) {
+    public Shop (String name) {
         this.name = name;
-        this.funds = funds;
+        this.sales = sales;
     }
 
     public String getName(){
         return this.name;
     }
 
-    public double getFunds(){
-        return this.funds;
+    public double getSales(){
+        return this.sales;
     }
 
-    public void setFunds(double funds){
-        this.funds = funds;
+//    public void setFunds(double funds){
+//        this.sales = funds;
+//    }
+
+    public void addSales(double sales){
+        this.sales += sales;
     }
 
-    public void addFunds(double funds){
-        this.funds += funds;
-    }
-
-    public void subtractFunds( double funds){
-        this.funds -= funds;
+    public void addRefunds( double funds){
+        this.refunds -= funds;
     }
 
     public void makeSale(double saleValue){
-        addFunds(saleValue);
+        addSales(saleValue);
+    }
+
+    public double getRefunds(){
+       return this.refunds;
     }
 
     public void refundSale(double refundValue){
-        subtractFunds(refundValue);
+        addRefunds(refundValue);
+    }
+
+    public double getTotalIncome(){
+        return sales + refunds;
     }
 
 
