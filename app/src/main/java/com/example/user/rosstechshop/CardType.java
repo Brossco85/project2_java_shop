@@ -7,5 +7,6 @@ package com.example.user.rosstechshop;
 public enum CardType {
     MASTERCARD,
     BARCLAYCARD,
+    MAESTRO,
     DEBITCARD;
 }
