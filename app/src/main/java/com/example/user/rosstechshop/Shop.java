@@ -2,6 +2,7 @@ package com.example.user.rosstechshop;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by user on 11/11/2016.
@@ -55,7 +56,7 @@ public class Shop {
 //need to change this to pass in the item and have access to the item value and the stock.
     public void makeSale(Item item){
         addSales(item.getPrice());
-//        sellStock(item);
+        sellStock(item);
     }
 
     public double getRefunds(){
@@ -78,11 +79,13 @@ public class Shop {
         inventory.add(item);
     }
 
+//    ask instructor about Iterator and also about references.
     public void sellStock(Item item){
-    for (Item  stock : inventory){
-        if (stock.getItemNumber() == item.getItemNumber()){
+    for (Iterator<Item> itr = inventory.iterator(); itr.hasNext();){
+        Item stock = itr.next();
+        if (stock == item){
             soldStock.add(stock);
-            inventory.remove(stock);
+            itr.remove();
         }
     }
     }

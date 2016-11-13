@@ -71,7 +71,7 @@ public class ShopTest {
 
     @Test
     public void testSellStock(){
-        shop.sellStock(item1);
+        shop.makeSale(item1);
 //        shop.makeSale(item2);
 //        shop.makeSale(item3);
         assertEquals(2, shop.getInventory().size());

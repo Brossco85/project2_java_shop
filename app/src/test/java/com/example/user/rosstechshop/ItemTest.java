@@ -35,10 +35,6 @@ public class ItemTest {
         assertEquals(100, item.getPrice());
     }
 
-    @Test
-    public void testGetItemNumber(){
-        assertEquals(1, item2.getItemNumber());
-    }
 
 
 }

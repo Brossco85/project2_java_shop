@@ -6,16 +6,12 @@ package com.example.user.rosstechshop;
 
 public class Item {
 
-    private static int nextItemNumber = 0;
-    private int itemNumber = 0;
     String name;
     String brand;
     int price;
 
 
     public Item(String brand, String name , int price){
-        nextItemNumber++;
-        this.itemNumber = nextItemNumber;
         this.brand = brand;
         this.name = name;
         this.price = price;
@@ -33,7 +29,4 @@ public class Item {
         return this.price;
     }
 
-    public int getItemNumber(){
-        return this.itemNumber;
-    }
 }
