@@ -22,17 +22,17 @@ public class Shop {
     }
 
 
-    private void inventorySetup(){
-        Item item1= new Item("Apple", "Macbook", 100);
-        inventory.add(item1);
-        Item item2= new Item("Apple", "Iphone", 200);
-        inventory.add(item2);
-        Item item3= new Item("Samsung", "Galaxy", 150);
-        inventory.add(item3);
-        Item item4= new Item("Apple", "Macbook", 100);
-        inventory.add(item4);
-
-    }
+//    private void inventorySetup(){
+//        Item item1= new Item("Apple", "Macbook", 100);
+//        inventory.add(item1);
+//        Item item2= new Item("Apple", "Iphone", 200);
+//        inventory.add(item2);
+//        Item item3= new Item("Samsung", "Galaxy", 150);
+//        inventory.add(item3);
+//        Item item4= new Item("Apple", "Macbook", 100);
+//        inventory.add(item4);
+//
+//    }
 
     public String getName(){
         return this.name;
@@ -63,8 +63,9 @@ public class Shop {
        return this.refunds;
     }
 
-    public void refundSale(double refundValue){
-        addRefunds(refundValue);
+    public void refundSale(Item item){
+        addRefunds(item.getPrice());
+        refundStock(item);
     }
 
     public double getTotalIncome(){
@@ -92,6 +93,16 @@ public class Shop {
 
     public ArrayList<Item> getSoldStock(){
         return this.soldStock;
+    }
+
+    public void refundStock(Item item){
+        for (Iterator<Item> itr = soldStock.iterator(); itr.hasNext();){
+            Item stock = itr.next();
+            if (stock == item){
+                inventory.add(stock);
+                itr.remove();
+            }
+        }
     }
 
 

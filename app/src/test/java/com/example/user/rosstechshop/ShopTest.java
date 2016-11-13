@@ -53,15 +53,14 @@ public class ShopTest {
 
     @Test
     public void testRefundSale(){
-        shop.refundSale(30.00);
-        assertEquals(-30.00, shop.getRefunds());
+        shop.refundSale(item1);
+        assertEquals(-100.00, shop.getRefunds());
     }
 
     @Test
     public void testTotalIncome(){
         shop.makeSale(item1);
-        shop.refundSale(30.00);
-        assertEquals(70.00, shop.getTotalIncome());
+        assertEquals(100.00, shop.getTotalIncome());
     }
 
 //    @Test
@@ -72,10 +71,19 @@ public class ShopTest {
     @Test
     public void testSellStock(){
         shop.makeSale(item1);
-//        shop.makeSale(item2);
-//        shop.makeSale(item3);
         assertEquals(2, shop.getInventory().size());
         assertEquals(1, shop.getSoldStock().size());
         assertEquals(100.00, shop.getSales());
+    }
+
+    @Test
+    public void testRefundStock(){
+        shop.makeSale(item1);
+        shop.makeSale(item2);
+        shop.makeSale(item3);
+        shop.refundSale(item1);
+        assertEquals(1, shop.getInventory().size());
+        assertEquals(2, shop.getSoldStock().size());
+        assertEquals(-100.00, shop.getRefunds());
     }
 }

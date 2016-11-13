@@ -23,6 +23,6 @@ public class Refund {
 
         private void recordRefund(){
             customer.acceptRefund(card, item.getPrice());
-            shop.refundSale(item.getPrice());
+            shop.refundSale(item);
         }
 }
