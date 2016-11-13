@@ -12,10 +12,12 @@ import static junit.framework.Assert.assertEquals;
 public class ItemTest {
 
     Item item;
+    Item item2;
 
     @Before
     public void before(){
         item = new Item("Apple","Macbook", 100);
+        item2 = new Item("Apple","Macbook", 100);
     }
 
     @Test
@@ -30,7 +32,12 @@ public class ItemTest {
 
     @Test
     public void testGetPrice(){
-        assertEquals(100.00, item.getPrice());
+        assertEquals(100, item.getPrice());
+    }
+
+    @Test
+    public void testGetItemNumber(){
+        assertEquals(1, item2.getItemNumber());
     }
 
 

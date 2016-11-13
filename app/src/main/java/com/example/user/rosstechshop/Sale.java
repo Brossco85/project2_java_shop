@@ -6,17 +6,18 @@ package com.example.user.rosstechshop;
 
 public class Sale {
 
-//    private static int nextInvoiceNumber = 0;
+    private static int nextInvoiceNumber = 0;
+    private int invoiceNumber = 0;
     private Customer customer;
     private Shop shop;
     private CardType card;
     private Item item;
-//    private int invoiceNumber = 0;
+
 
 
     public Sale(Customer customer, Shop shop, CardType card, Item item){
-//        invoiceNumber = nextInvoiceNumber;
-//        nextInvoiceNumber++;
+        nextInvoiceNumber++;
+        this.invoiceNumber = nextInvoiceNumber;
         this.customer = customer;
         this.shop = shop;
         this.card = card;
@@ -27,12 +28,28 @@ public class Sale {
 
     private void recordSale(){
         customer.makePurchase(card, item.getPrice());
-        shop.makeSale(item.getPrice());
+        shop.makeSale(item);
     }
 
-//    public int getInvoiceNumber(){
-//        return this.invoiceNumber;
-//    }
+    public Customer getCustomer(){
+        return this.customer;
+    }
+
+    public Shop getShop(){
+        return this.shop;
+    }
+
+    public CardType getCard(){
+        return this.card;
+    }
+
+    public Item getItem(){
+        return this.item;
+    }
+
+    public int getInvoiceNumber(){
+        return this.invoiceNumber;
+    }
 
 
 }

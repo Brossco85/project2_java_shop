@@ -52,5 +52,9 @@ public class Customer {
         makePaymentFromCard(card, purchase);
     }
 
+    public void acceptRefund(CardType card, Integer purchase){
+        refundPaymentToCard(card, purchase);
+    }
+
 
 }

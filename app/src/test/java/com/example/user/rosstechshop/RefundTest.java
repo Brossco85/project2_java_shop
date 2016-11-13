@@ -6,11 +6,10 @@ import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
 
 /**
- * Created by user on 12/11/2016.
+ * Created by user on 13/11/2016.
  */
 
-public class SaleTest {
-
+public class RefundTest {
 
     Customer customer1;
     Shop shop1;
@@ -18,7 +17,6 @@ public class SaleTest {
     Sale sale2;
     Item item1;
     Item item2;
-    Item item3;
 
 
     @Before
@@ -27,7 +25,6 @@ public class SaleTest {
         customer1.addPaymentCard(CardType.BARCLAYCARD, 500);
         item1 = new Item("Apple","Macbook", 100);
         item2 = new Item("Apple","Iphone", 180);
-        item3 = new Item("Apple","Iphone", 180);
 
         shop1 = new Shop("Glasgow");
         sale1 = new Sale(customer1, shop1, CardType.BARCLAYCARD, item1);
@@ -35,15 +32,10 @@ public class SaleTest {
     }
 
     @Test
-    public void testSale(){
-        assertEquals(220, customer1.getCardBalance(CardType.BARCLAYCARD));
+    public void testRefund(){
+        Refund refund1 = new Refund(sale1);
+        assertEquals(320, customer1.getCardBalance(CardType.BARCLAYCARD));
         assertEquals(280.00, shop1.getSales());
+        assertEquals(-100.00, shop1.getRefunds());
     }
-
-    @Test
-    public void testInvoiceNumber(){
-        assertEquals(1, sale1.getInvoiceNumber());
-        assertEquals(2, sale2.getInvoiceNumber());
-    }
-
 }

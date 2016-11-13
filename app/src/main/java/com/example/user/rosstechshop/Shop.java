@@ -12,23 +12,24 @@ public class Shop {
     private String name;
     private double sales;
     private double refunds;
-    public ArrayList<Item> stock = new ArrayList<Item>();
+    public ArrayList<Item> inventory = new ArrayList<Item>();
+    public ArrayList<Item> soldStock = new ArrayList<Item>();
 
     public Shop (String name) {
         this.name = name;
-        stockSetup();
+//        inventorySetup();
     }
 
 
-    private void stockSetup(){
+    private void inventorySetup(){
         Item item1= new Item("Apple", "Macbook", 100);
-        stock.add(item1);
+        inventory.add(item1);
         Item item2= new Item("Apple", "Iphone", 200);
-        stock.add(item2);
+        inventory.add(item2);
         Item item3= new Item("Samsung", "Galaxy", 150);
-        stock.add(item3);
+        inventory.add(item3);
         Item item4= new Item("Apple", "Macbook", 100);
-        stock.add(item4);
+        inventory.add(item4);
 
     }
 
@@ -51,9 +52,10 @@ public class Shop {
     public void addRefunds( double funds){
         this.refunds -= funds;
     }
-
-    public void makeSale(double saleValue){
-        addSales(saleValue);
+//need to change this to pass in the item and have access to the item value and the stock.
+    public void makeSale(Item item){
+        addSales(item.getPrice());
+//        sellStock(item);
     }
 
     public double getRefunds(){
@@ -68,8 +70,25 @@ public class Shop {
         return sales + refunds;
     }
 
-    public ArrayList<Item> getStock(){
-        return this.stock;
+    public ArrayList<Item> getInventory(){
+        return this.inventory;
+    }
+
+    public void addStock(Item item){
+        inventory.add(item);
+    }
+
+    public void sellStock(Item item){
+    for (Item  stock : inventory){
+        if (stock.getItemNumber() == item.getItemNumber()){
+            soldStock.add(stock);
+            inventory.remove(stock);
+        }
+    }
+    }
+
+    public ArrayList<Item> getSoldStock(){
+        return this.soldStock;
     }
 
 

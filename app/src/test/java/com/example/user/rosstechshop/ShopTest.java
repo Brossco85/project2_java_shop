@@ -11,12 +11,21 @@ import static junit.framework.Assert.assertEquals;
 
 public class ShopTest {
 
-Shop shop;
+    Shop shop;
+    Item item1;
+    Item item2;
+    Item item3;
 
     @Before
 
     public void before(){
         shop = new Shop("Glasgow");
+        item1= new Item("Apple", "Macbook", 100);
+        shop.addStock(item1);
+        item2= new Item("Apple", "Macbook", 100);
+        shop.addStock(item2);
+        item3= new Item("Apple", "Iphone", 200);
+        shop.addStock(item3);
     }
 
     @Test
@@ -38,8 +47,8 @@ Shop shop;
 
     @Test
     public void testMakeSale(){
-        shop.makeSale(50.00);
-        assertEquals(50.00, shop.getSales());
+        shop.makeSale(item1);
+        assertEquals(100.00, shop.getSales());
     }
 
     @Test
@@ -50,13 +59,23 @@ Shop shop;
 
     @Test
     public void testTotalIncome(){
-        shop.makeSale(50.00);
+        shop.makeSale(item1);
         shop.refundSale(30.00);
-        assertEquals(20.00, shop.getTotalIncome());
+        assertEquals(70.00, shop.getTotalIncome());
     }
 
+//    @Test
+//    public void testStockSetup(){
+//        assertEquals(4, shop.getInventory().size());
+//    }
+
     @Test
-    public void testStockSetup(){
-        assertEquals(4, shop.getStock().size());
+    public void testSellStock(){
+        shop.sellStock(item1);
+//        shop.makeSale(item2);
+//        shop.makeSale(item3);
+        assertEquals(2, shop.getInventory().size());
+        assertEquals(1, shop.getSoldStock().size());
+        assertEquals(100.00, shop.getSales());
     }
 }
