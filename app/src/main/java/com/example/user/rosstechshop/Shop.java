@@ -21,7 +21,7 @@ public class Shop {
 //        inventorySetup();
     }
 
-
+//    Should this be done?
 //    private void inventorySetup(){
 //        Item item1= new Item("Apple", "Macbook", 100);
 //        inventory.add(item1);
@@ -53,7 +53,6 @@ public class Shop {
     public void addRefunds( double funds){
         this.refunds -= funds;
     }
-//need to change this to pass in the item and have access to the item value and the stock.
     public void makeSale(Item item){
         addSales(item.getPrice());
         sellStock(item);

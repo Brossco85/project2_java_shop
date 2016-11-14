@@ -8,6 +8,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CustomerLoginActivity"
+            android:label="@string/activity_customer_login_title"
+            android:parentActivityName=".WelcomeActivity">
+        </activity>
+
     </application>
 
 </manifest>

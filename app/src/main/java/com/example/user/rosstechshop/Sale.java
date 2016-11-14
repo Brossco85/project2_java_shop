@@ -15,6 +15,7 @@ public class Sale {
 
 
 
+
     public Sale(Customer customer, Shop shop, CardType card, Item item){
         nextInvoiceNumber++;
         this.invoiceNumber = nextInvoiceNumber;
@@ -22,6 +23,9 @@ public class Sale {
         this.shop = shop;
         this.card = card;
         this.item = item;
+
+
+
         recordSale();
 
     }

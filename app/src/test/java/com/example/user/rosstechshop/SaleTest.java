@@ -40,10 +40,4 @@ public class SaleTest {
         assertEquals(280.00, shop1.getSales());
     }
 
-    @Test
-    public void testInvoiceNumber(){
-        assertEquals(1, sale1.getInvoiceNumber());
-        assertEquals(2, sale2.getInvoiceNumber());
-    }
-
 }
