@@ -5,4 +5,9 @@
     <string name="customer_button">Customer Log in</string>
     <string name="customer_login">Please select your user id</string>
     <string name="activity_customer_login_title">Customer Log In</string>
+    <string name="activity_new_customer_title">New Customer</string>
+    <string name="new_customer_button">Create Account</string>
+    <string name="name">Enter Name</string>
+    <string name="create_button">Create</string>
+    <string name="customer_added_toast">Customer Added!</string>
 </resources>

@@ -22,6 +22,12 @@
             android:parentActivityName=".WelcomeActivity">
         </activity>
 
+        <activity
+            android:name=".NewCustomerActivity"
+            android:label="@string/activity_new_customer_title"
+            android:parentActivityName=".CustomerLoginActivity">
+        </activity>
+
     </application>
 
 </manifest>
