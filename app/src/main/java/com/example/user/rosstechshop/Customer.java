@@ -1,5 +1,6 @@
 package com.example.user.rosstechshop;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -8,6 +9,7 @@ import java.util.HashMap;
 
 public class Customer {
 
+    static ArrayList<String> allCustomers = new ArrayList<>();
     private String name;
     private int funds;
     HashMap<CardType, Integer> paymentOptions;
@@ -15,7 +17,10 @@ public class Customer {
     public Customer(String name){
         this.name = name;
         this.paymentOptions = new HashMap<>();
+        addToAllCustomers();
     }
+
+
 
     public String getName(){
         return this.name;
@@ -23,6 +28,10 @@ public class Customer {
 
     public void addPaymentCard(CardType card, int fundsAvailable){
         paymentOptions.put(card, fundsAvailable);
+    }
+
+    private void addToAllCustomers(){
+        allCustomers.add(name);
     }
 
 //    check if card exists if not add card to paymentOptions ArrayList

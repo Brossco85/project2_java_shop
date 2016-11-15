@@ -20,19 +20,31 @@
         android:id="@+id/name_text"
         android:hint="@string/name"
         android:textSize="30dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="150dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/create_player_button"
         android:textSize="30dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_button"/>
         <!--android:fontFamily="casual"/>-->
 
+
+
 </LinearLayout>
+
+    <Button
+        android:id="@+id/all_customers_button"
+        android:textSize="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all_customers_button"/>
+
 </LinearLayout>

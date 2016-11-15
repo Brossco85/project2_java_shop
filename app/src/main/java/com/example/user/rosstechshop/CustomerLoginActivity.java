@@ -56,12 +56,14 @@ public class CustomerLoginActivity extends AppCompatActivity {
             }
         });
 
+
         mListView = (ListView) findViewById(R.id.my_listview);
 
+        ArrayList<String> customers = Customer.allCustomers;
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
-                setUpStringsList());
+                customers);
 
         mListView.setAdapter(adapter);
 

@@ -1,5 +1,6 @@
 package com.example.user.rosstechshop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,6 +18,7 @@ public class NewCustomerActivity extends AppCompatActivity {
 
     EditText mCustomerName;
     Button mCreateCustomerButton;
+    Button mAllCustomersButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,5 +42,14 @@ public class NewCustomerActivity extends AppCompatActivity {
     }
     });
 }
+
+        mAllCustomersButton = (Button)findViewById(R.id.all_customers_button);
+        mAllCustomersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NewCustomerActivity.this, CustomerLoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
