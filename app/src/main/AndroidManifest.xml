@@ -40,6 +40,18 @@
             android:parentActivityName=".WelcomeActivity">
         </activity>
 
+        <activity
+            android:name=".NewShopActivity"
+            android:label="@string/activity_new_shop"
+            android:parentActivityName=".ShopActivity">
+        </activity>
+
+        <activity
+            android:name=".AddStockActivity"
+            android:label="@string/activity_add_stock"
+            android:parentActivityName=".NewShopActivity">
+        </activity>
+
     </application>
 
 </manifest>

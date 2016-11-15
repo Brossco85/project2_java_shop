@@ -24,6 +24,8 @@ public class WelcomeActivity extends AppCompatActivity {
         mBusinessButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(WelcomeActivity.this, ShopActivity.class);
+                startActivity(intent);
 
             }
         });

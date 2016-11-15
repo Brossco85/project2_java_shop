@@ -22,5 +22,12 @@
     <string name="shop_activity">Shop Analysis</string>
     <string name="create_shop_button">Create</string>
     <string name="all_shops_button">View All Shops</string>
+    <string name="activity_shop">All Shops</string>
+    <string name="activity_new_shop">New Shop</string>
+    <string name="activity_add_stock">Add Stock</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_brand">Item Brand</string>
+    <string name="item_price">Item Price</string>
+    <string name="add_to_stock">Add to Stock</string>
     <string name="new_shop_create">Please enter shop details below</string>
 </resources>
