@@ -6,12 +6,21 @@
     <string name="customer_login">Please select your user id</string>
     <string name="activity_customer_login_title">Customer Log In</string>
     <string name="activity_new_customer_title">New Customer</string>
-    <string name="all_customers_button">All Customers</string>
+    <string name="all_customers_button">View All Customers</string>
+    <string name="activity_add_payment_method">Add Payment Method</string>
     <string name="new_customer_button">Create Account</string>
     <string name="name">Enter Name</string>
+    <string name="shop_name_text">Shop Name</string>
     <string name="create_button">Create</string>
     <string name="customer_added_toast">Customer Added!</string>
     <string name="payment_type">Payment Method</string>
     <string name="payment_limit">Limit</string>
     <string name="add__payment_method_button">Add Payment Method</string>
+    <string name="new_shop_button">Register New Store</string>
+    <string name="shop_analysis">Store</string>
+    <string name="shop_profit">YTD Profit</string>
+    <string name="shop_activity">Shop Analysis</string>
+    <string name="create_shop_button">Create</string>
+    <string name="all_shops_button">View All Shops</string>
+    <string name="new_shop_create">Please enter shop details below</string>
 </resources>

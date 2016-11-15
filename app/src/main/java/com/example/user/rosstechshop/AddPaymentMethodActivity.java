@@ -48,6 +48,8 @@ public class AddPaymentMethodActivity extends AppCompatActivity {
                 Customer customer = (Customer) intent.getSerializableExtra("customer");
                 customer.addPaymentCard(card, limit2);
 
+                Intent intent2 = new Intent(AddPaymentMethodActivity.this, CustomerLoginActivity.class);
+                startActivity(intent2);
             }
         });
 

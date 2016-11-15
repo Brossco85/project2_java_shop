@@ -30,8 +30,14 @@
 
         <activity
             android:name=".AddPaymentMethodActivity"
-            android:label="@string/activity_new_customer_title"
+            android:label="@string/activity_add_payment_method"
             android:parentActivityName=".AddPaymentMethodActivity">
+        </activity>
+
+        <activity
+            android:name=".ShopActivity"
+            android:label="@string/activity_shop"
+            android:parentActivityName=".WelcomeActivity">
         </activity>
 
     </application>

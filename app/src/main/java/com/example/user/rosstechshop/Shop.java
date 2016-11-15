@@ -1,5 +1,6 @@
 package com.example.user.rosstechshop;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -8,31 +9,24 @@ import java.util.Iterator;
  * Created by user on 11/11/2016.
  */
 
-public class Shop {
+public class Shop implements Serializable {
 
+    static ArrayList<String> allShops = new ArrayList<>();
     private String name;
     private double sales;
     private double refunds;
-    public ArrayList<Item> inventory = new ArrayList<Item>();
-    public ArrayList<Item> soldStock = new ArrayList<Item>();
+    public ArrayList<Item> inventory = new ArrayList<>();
+    public ArrayList<Item> soldStock = new ArrayList<>();
 
     public Shop (String name) {
         this.name = name;
-//        inventorySetup();
+        addToAllShops();
     }
 
-//    Should this be done?
-//    private void inventorySetup(){
-//        Item item1= new Item("Apple", "Macbook", 100);
-//        inventory.add(item1);
-//        Item item2= new Item("Apple", "Iphone", 200);
-//        inventory.add(item2);
-//        Item item3= new Item("Samsung", "Galaxy", 150);
-//        inventory.add(item3);
-//        Item item4= new Item("Apple", "Macbook", 100);
-//        inventory.add(item4);
-//
-//    }
+    private void addToAllShops(){
+        allShops.add(name);
+    }
+
 
     public String getName(){
         return this.name;
@@ -42,9 +36,6 @@ public class Shop {
         return this.sales;
     }
 
-//    public void setFunds(double funds){
-//        this.sales = funds;
-//    }
 
     public void addSales(double sales){
         this.sales += sales;
@@ -79,7 +70,6 @@ public class Shop {
         inventory.add(item);
     }
 
-//    ask instructor about Iterator and also about references.
     public void sellStock(Item item){
     for (Iterator<Item> itr = inventory.iterator(); itr.hasNext();){
         Item stock = itr.next();
