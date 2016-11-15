@@ -28,6 +28,12 @@
             android:parentActivityName=".CustomerLoginActivity">
         </activity>
 
+        <activity
+            android:name=".AddPaymentMethodActivity"
+            android:label="@string/activity_new_customer_title"
+            android:parentActivityName=".AddPaymentMethodActivity">
+        </activity>
+
     </application>
 
 </manifest>

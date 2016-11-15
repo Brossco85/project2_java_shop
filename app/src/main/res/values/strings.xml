@@ -11,4 +11,7 @@
     <string name="name">Enter Name</string>
     <string name="create_button">Create</string>
     <string name="customer_added_toast">Customer Added!</string>
+    <string name="payment_type">Payment Method</string>
+    <string name="payment_limit">Limit</string>
+    <string name="add__payment_method_button">Add Payment Method</string>
 </resources>

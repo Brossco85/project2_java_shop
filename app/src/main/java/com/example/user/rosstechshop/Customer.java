@@ -1,5 +1,6 @@
 package com.example.user.rosstechshop;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -7,7 +8,7 @@ import java.util.HashMap;
  * Created by user on 11/11/2016.
  */
 
-public class Customer {
+public class Customer implements Serializable {
 
     static ArrayList<String> allCustomers = new ArrayList<>();
     private String name;
@@ -28,6 +29,7 @@ public class Customer {
 
     public void addPaymentCard(CardType card, int fundsAvailable){
         paymentOptions.put(card, fundsAvailable);
+        System.out.println(card.toString());
     }
 
     private void addToAllCustomers(){

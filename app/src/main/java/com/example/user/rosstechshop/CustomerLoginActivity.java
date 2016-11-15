@@ -21,26 +21,6 @@ public class CustomerLoginActivity extends AppCompatActivity {
     ListView mListView;
 
 //    placeholder for arraylist of customers from mysql database
-    private ArrayList<String> setUpStringsList() {
-        ArrayList<String> stringsList = new ArrayList<String>();
-
-        String[] strings = {
-                "Jack Jarvis",
-                "Victor McDade",
-                "Winston Ingram",
-                "Tam Mullen",
-                "Isa Brennan",
-                "Boaby the Barman",
-                "Naveed Harrid"
-        };
-
-        for (int i = 0; i < strings.length; i++) {
-            stringsList.add(strings[i]);
-        }
-        return stringsList;
-    }
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
