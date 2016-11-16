@@ -39,6 +39,14 @@
         android:layout_height="wrap_content"
         android:text="@string/add_to_stock"/>
 
+    <Button
+        android:id="@+id/back_to_shops"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_shop"/>
+
 
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.user.rosstechshop;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -10,6 +11,7 @@ import java.util.HashMap;
 
 public class Customer implements Serializable {
 
+//    used for demo purposes, information would be pulled from database
     static ArrayList<String> allCustomers = new ArrayList<>();
     private String name;
     private int funds;
@@ -22,7 +24,6 @@ public class Customer implements Serializable {
     }
 
 
-
     public String getName(){
         return this.name;
     }
@@ -31,6 +32,7 @@ public class Customer implements Serializable {
         paymentOptions.put(card, fundsAvailable);
         System.out.println(card.toString());
     }
+
 
     private void addToAllCustomers(){
         allCustomers.add(name);

@@ -29,5 +29,9 @@
     <string name="item_brand">Item Brand</string>
     <string name="item_price">Item Price</string>
     <string name="add_to_stock">Add to Stock</string>
+    <string name="back_to_shop">Back to Shops</string>
     <string name="new_shop_create">Please enter shop details below</string>
+    <string name="stock_added_toast">Item added to stock</string>
+    <string name="view_accounts_button">View Accounts</string>
+    <string name="shop_online_button">Shop Online</string>
 </resources>

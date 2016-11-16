@@ -23,8 +23,10 @@ public class Shop implements Serializable {
         addToAllShops();
     }
 
+//    if time make this more dynamic using columns
     private void addToAllShops(){
-        allShops.add(name);
+        String shopname = name + "                                         " + sales;
+        allShops.add(shopname);
     }
 
 

@@ -52,6 +52,12 @@
             android:parentActivityName=".NewShopActivity">
         </activity>
 
+        <activity
+            android:name=".CustomerOptionsActivity"
+            android:label="@string/activity_add_stock"
+            android:parentActivityName=".NewCustomerActivity">
+        </activity>
+
     </application>
 
 </manifest>
