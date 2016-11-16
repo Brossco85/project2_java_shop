@@ -54,7 +54,7 @@
 
         <activity
             android:name=".CustomerOptionsActivity"
-            android:label="@string/activity_add_stock"
+            android:label="@string/activity_options"
             android:parentActivityName=".NewCustomerActivity">
         </activity>
 

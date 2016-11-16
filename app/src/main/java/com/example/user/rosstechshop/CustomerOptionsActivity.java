@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class CustomerOptionsActivity extends AppCompatActivity {
 
-
+    Button mAddPaymentMethod;
     Button mViewAccountsButton;
     Button mShopOnlineButton;
 
@@ -24,19 +24,38 @@ public class CustomerOptionsActivity extends AppCompatActivity {
         mViewAccountsButton = (Button) findViewById(R.id.view_accounts_button);
         mViewAccountsButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CustomerOptionsActivity.this, NewCustomerActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                Intent intent = getIntent();
+                Bundle extras = intent.getExtras();
+                Customer customer = (Customer) intent.getSerializableExtra("customer");
+                Intent intent2 = new Intent(CustomerOptionsActivity.this, AddPaymentMethodActivity.class);
+                intent2.putExtra("customer", customer);
+                startActivity(intent2);
             }
         });
 
         mShopOnlineButton = (Button) findViewById(R.id.shop_online_button);
-        mViewAccountsButton.setOnClickListener(new View.OnClickListener() {
+        mShopOnlineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //            Create online shop Activity
             }
         });
 
+        mAddPaymentMethod = (Button) findViewById(R.id.add_payment_type_button);
+        mAddPaymentMethod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = getIntent();
+                Bundle extras = intent.getExtras();
+                Customer customer = (Customer) intent.getSerializableExtra("customer");
+                Intent intent2 = new Intent(CustomerOptionsActivity.this, AddPaymentMethodActivity.class);
+                intent2.putExtra("customer", customer);
+                startActivity(intent2);
+
+            }
+
+
+        });
     }
 }

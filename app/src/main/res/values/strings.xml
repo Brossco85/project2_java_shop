@@ -34,4 +34,5 @@
     <string name="stock_added_toast">Item added to stock</string>
     <string name="view_accounts_button">View Accounts</string>
     <string name="shop_online_button">Shop Online</string>
+    <string name="activity_options">Customer Options</string>
 </resources>

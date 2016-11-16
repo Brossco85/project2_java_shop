@@ -53,7 +53,7 @@ public class CustomerLoginActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selected = (String)mListView.getItemAtPosition(position);
                 Log.d("ListView:", selected + " selected");
-                Intent intent = new Intent(CustomerLoginActivity.this, NewCustomerActivity.class);
+                Intent intent = new Intent(CustomerLoginActivity.this, CustomerOptionsActivity.class);
 
                 startActivity(intent);
 
