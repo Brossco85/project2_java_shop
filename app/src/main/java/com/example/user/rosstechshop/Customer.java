@@ -1,7 +1,6 @@
 package com.example.user.rosstechshop;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -24,6 +23,19 @@ public class Customer implements Serializable {
     }
 
 
+    public ArrayList<String> getPaymentOptionString(){
+        ArrayList<String> paymentString = new ArrayList<>();
+        for (CardType card : paymentOptions.keySet()){
+            Integer value = paymentOptions.get(card);
+            String string = card.toString() + "                                         " + value.toString();
+            paymentString.add(string);
+        }
+        return paymentString;
+    }
+
+    private void addToAllCustomers(){
+        allCustomers.add(name);
+    }
     public String getName(){
         return this.name;
     }
@@ -33,10 +45,16 @@ public class Customer implements Serializable {
         System.out.println(card.toString());
     }
 
-
-    private void addToAllCustomers(){
-        allCustomers.add(name);
+    public boolean checkFundsAvailable(CardType card, Item item) {
+       boolean available = false;
+        for (CardType paymentCard : paymentOptions.keySet()){
+            if (paymentCard == card && paymentOptions.get(paymentCard) > item.getPrice()){
+                available = true;
+            }
+        }
+        return available;
     }
+
 
 //    check if card exists if not add card to paymentOptions ArrayList
 

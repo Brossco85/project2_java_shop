@@ -24,9 +24,10 @@ public class Sale {
         this.card = card;
         this.item = item;
 
+        if (validateSale()){
+            recordSale();
+        }
 
-
-        recordSale();
 
     }
 
@@ -34,6 +35,15 @@ public class Sale {
         customer.makePurchase(card, item.getPrice());
         shop.makeSale(item);
     }
+
+    private boolean validateSale(){
+       boolean validate = false;
+       if (customer.checkFundsAvailable(card, item) && shop.checkStock(item)){
+          validate = true;
+       }
+    return validate;
+    }
+
 
     public Customer getCustomer(){
         return this.customer;

@@ -1,7 +1,6 @@
 package com.example.user.rosstechshop;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -11,6 +10,7 @@ import java.util.Iterator;
 
 public class Shop implements Serializable {
 
+    //    used for demo purposes, information would be pulled from database
     static ArrayList<String> allShops = new ArrayList<>();
     private String name;
     private double sales;
@@ -29,10 +29,21 @@ public class Shop implements Serializable {
         allShops.add(shopname);
     }
 
+    public boolean checkStock(Item item){
+        boolean available = false;
+        for (Item stock : inventory){
+            if (item == stock){
+              available = true;
+            }
+        }
+        return available;
+    }
+
 
     public String getName(){
         return this.name;
     }
+
 
     public double getSales(){
         return this.sales;

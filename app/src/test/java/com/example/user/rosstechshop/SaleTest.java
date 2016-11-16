@@ -30,6 +30,9 @@ public class SaleTest {
         item3 = new Item("Apple","Iphone", 180);
 
         shop1 = new Shop("Glasgow");
+        shop1.addStock(item1);
+        shop1.addStock(item2);
+        shop1.addStock(item3);
         sale1 = new Sale(customer1, shop1, CardType.BARCLAYCARD, item1);
         sale2 = new Sale(customer1, shop1, CardType.BARCLAYCARD, item2);
     }

@@ -6,24 +6,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="24dp"
-        android:text="@string/welcome_text"/>
+        android:textSize="50dp"
+        android:padding="30dp"
+        android:text="@string/welcome_text"
+        android:fontFamily="sans-serif"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/business_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="25dp"
             android:text="@string/business_button"/>
 
         <Button
             android:id="@+id/customer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="25dp"
             android:text="@string/customer_button"/>
 
     </LinearLayout>

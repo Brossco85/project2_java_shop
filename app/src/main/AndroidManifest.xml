@@ -58,6 +58,18 @@
             android:parentActivityName=".NewCustomerActivity">
         </activity>
 
+        <activity
+            android:name=".CustomerAccountsActivity"
+            android:label="@string/activity_options"
+            android:parentActivityName=".CustomerOptionsActivity">
+        </activity>
+
+        <activity
+            android:name=".OnlineShopActivity"
+            android:label="@string/activity_options"
+            android:parentActivityName=".CustomerOptionsActivity">
+        </activity>
+
     </application>
 
 </manifest>

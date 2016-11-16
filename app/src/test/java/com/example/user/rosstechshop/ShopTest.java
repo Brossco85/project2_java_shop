@@ -15,6 +15,7 @@ public class ShopTest {
     Item item1;
     Item item2;
     Item item3;
+    Item item4;
 
     @Before
 
@@ -26,6 +27,7 @@ public class ShopTest {
         shop.addStock(item2);
         item3= new Item("Apple", "Iphone", 200);
         shop.addStock(item3);
+        item4= new Item("Microsoft", "Surface", 200);
     }
 
     @Test
@@ -46,6 +48,12 @@ public class ShopTest {
     }
 
     @Test
+    public void testCheckStock(){
+        assertEquals(true, shop.checkStock(item1));
+        assertEquals(false, shop.checkStock(item4));
+    }
+
+    @Test
     public void testMakeSale(){
         shop.makeSale(item1);
         assertEquals(100.00, shop.getSales());
@@ -63,10 +71,6 @@ public class ShopTest {
         assertEquals(100.00, shop.getTotalIncome());
     }
 
-//    @Test
-//    public void testStockSetup(){
-//        assertEquals(4, shop.getInventory().size());
-//    }
 
     @Test
     public void testSellStock(){

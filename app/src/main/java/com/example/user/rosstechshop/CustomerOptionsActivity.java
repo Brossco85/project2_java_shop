@@ -28,7 +28,7 @@ public class CustomerOptionsActivity extends AppCompatActivity {
                 Intent intent = getIntent();
                 Bundle extras = intent.getExtras();
                 Customer customer = (Customer) intent.getSerializableExtra("customer");
-                Intent intent2 = new Intent(CustomerOptionsActivity.this, AddPaymentMethodActivity.class);
+                Intent intent2 = new Intent(CustomerOptionsActivity.this, CustomerAccountsActivity.class);
                 intent2.putExtra("customer", customer);
                 startActivity(intent2);
             }
@@ -38,7 +38,12 @@ public class CustomerOptionsActivity extends AppCompatActivity {
         mShopOnlineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//            Create online shop Activity
+                Intent intent = getIntent();
+                Bundle extras = intent.getExtras();
+                Customer customer = (Customer) intent.getSerializableExtra("customer");
+                Intent intent2 = new Intent(CustomerOptionsActivity.this, OnlineShopActivity.class);
+                intent2.putExtra("customer", customer);
+                startActivity(intent2);
             }
         });
 

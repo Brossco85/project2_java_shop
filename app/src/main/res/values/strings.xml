@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">RossTechShop</string>
-    <string name="welcome_text">Welcome to RossTech</string>
+    <string name="app_name">RossTech</string>
+    <string name="welcome_text">RossTech</string>
     <string name="business_button">Business Log in</string>
     <string name="customer_button">Customer Log in</string>
     <string name="customer_login">Please select your user id</string>
@@ -35,4 +35,7 @@
     <string name="view_accounts_button">View Accounts</string>
     <string name="shop_online_button">Shop Online</string>
     <string name="activity_options">Customer Options</string>
+    <string name="customer_accounts">Customer Accounts</string>
+    <string name="card_type">Card Type</string>
+    <string name="card_value">Card Value</string>
 </resources>
