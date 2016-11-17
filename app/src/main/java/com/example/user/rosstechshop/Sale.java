@@ -27,14 +27,8 @@ public class Sale {
         if (validateSale()){
             recordSale();
         }
-
-
     }
 
-    private void recordSale(){
-        customer.makePurchase(card, item.getPrice());
-        shop.makeSale(item);
-    }
 
     private boolean validateSale(){
        boolean validate = false;
@@ -42,6 +36,11 @@ public class Sale {
           validate = true;
        }
     return validate;
+    }
+
+    private void recordSale(){
+        customer.makePurchase(card, item.getPrice());
+        shop.makeSale(item);
     }
 
 
